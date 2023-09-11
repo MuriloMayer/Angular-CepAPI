@@ -1,0 +1,47 @@
+<div class="card flex justify-content-center">
+<div class="p-card-content">
+    <div  class="card-container flex justify-content-center" id="CEP" >
+        <span class="p-float-label" cep>
+            <input pInputText  [(ngModel)]="cep"  />
+            <label htmlFor="CeP">CeP</label>
+        </span>
+    </div>
+    <div class="card flex justify-content-center" id="Auto0">
+        <span class="p-float-label" id="Rua">
+            <input pInputText value="{{ resultadoAPI?.logradouro }}" disabled />
+            <label htmlFor="Rua">Rua</label>
+        </span>
+        <span class="p-float-label" id="Complemento">
+            <input pInputText value="{{ resultadoAPI?.complemento}}"  disabled/>
+            <label htmlFor="Complemento">Complemento</label>
+        </span>
+
+    </div>
+    <div class="card flex justify-content-center" id="Auto1">
+
+        <span class="p-float-label" id="Bairro">
+            <input pInputText value="{{ resultadoAPI?.bairro }}"  class="p-disabled"/>
+            <label htmlFor="Bairro">Bairro</label>
+        </span>
+        <span class="p-float-label" id="Cidade">
+            <input pInputText value="{{ resultadoAPI?.localidade }}"  disabled/>
+            <label htmlFor="Cidade">Cidade</label>
+        </span>
+        <span class="p-float-label" id="Estado">
+            <input pInputText value="{{ resultadoAPI?.uf }}"  disabled/>
+            <label htmlFor="Estado">Estado</label>
+        </span>
+
+    </div>
+
+
+        <div class="card-small flex justify-content-center">
+            <span class="p-button-success" id="botao">
+                <p-button label="Submit" pRipple  (click)="chamarAPI()" ></p-button>
+            </span>
+        </div>
+
+
+
+
+</div>
